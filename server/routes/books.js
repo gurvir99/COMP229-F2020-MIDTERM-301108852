@@ -29,7 +29,7 @@ router.get('/add', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
-    res.render('books/details', {title: 'Add Book'});
+    res.render('books/details', {title: 'Add a Book'});
 
 });
 
@@ -39,15 +39,15 @@ router.post('/add', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
-    let newBook = Book({
-      "Title": req.body.Title,
-      "Description": req.body.Description,
-      "Price": req.body.Price,
-      "Author": req.body.Author,
-      "Genre": req.body.Genre
+    let newBook = book({
+      "Title": req.body.title,
+      "Description": req.body.description,
+      "Price": req.body.price,
+      "Author": req.body.author,
+      "Genre": req.body.genre
    });
 
-   Book.create(newBook,(err,Book)=>{
+   book.create(newBook,(err,book)=>{
        if(err)
        {
            console.log(err);
@@ -123,6 +123,21 @@ router.get('/delete/:id', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
+    let id = req.params.id;
+
+ book.remove({_id: id}, (err) => {
+    if(err)
+    {
+        console.log(err);
+        res.end(err);
+    }
+    else
+    {
+        //refresh the book list
+        res.redirect('/books');
+    }
+ })
+
 });
 
 
