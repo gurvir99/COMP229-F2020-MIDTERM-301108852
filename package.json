@@ -25,7 +25,7 @@
     "popper.js": "^1.16.1"
   },
   "engines": {
-    "node": "^10.15.0",
+    "node": "^12.18.3",
     "npm": "^6.0.0"
   },
   "description": "## Welcome to the MidTerm Project - the Favourite Book List App",
@@ -43,19 +43,19 @@
     "@types/passport-local": "^1.0.33",
     "@types/passport-local-mongoose": "^4.0.13"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
   "keywords": [
     "NodeJS",
     "ExpressJS",
     "EJS"
   ],
-  "author": "Your Name Goes Here",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurvir99/COMP229-F2020-MIDTERM-301108852.git"
+  },
+  "author": "Gurvir Singh",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/gurvir99/COMP229-F2020-MIDTERM-301108852/issues"
   },
-  "homepage": ""
+  "homepage": "https://github.com/gurvir99/COMP229-F2020-MIDTERM-301108852#readme"
 }
